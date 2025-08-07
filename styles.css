@@ -4,8 +4,20 @@
   box-sizing: border-box;
 }
 
-body {
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  min-block-size: 100vh;
+  scroll-snap-stop: always;
   height: 100vh;
+  overflow: hidden;
+
+}
+
+.landing-page {
   background-image: url('./images/Rectangle 599.png');
   background-size: cover;
   background-position: center;
@@ -13,7 +25,7 @@ body {
   font-family: 'Lucida Sans', sans-serif;
 }
 
-.header {
+.landing-page .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,13 +69,12 @@ body {
   text-decoration: none;
 }
 
-.dropdown{
+.dropdown {
   display: none;
   position:absolute;
   left: 0;
   top: 100%;
   z-index: 99;
-  padding: 10px 0;
   min-width: 250px;
 
 }
@@ -232,4 +243,362 @@ body {
 .visual-area img {
   width: 100%;
   object-fit: cover; 
+}
+
+
+.features .heading {
+  text-align: center;
+  padding: 50px;
+}
+
+.features {
+  display: flex;
+  align-items: flex-start; /* align items to the top */
+  padding: 0px 40px 40px 0;
+  gap: 60px; /* space between phone image and blocks */
+}
+
+.left-logo {
+  position: relative;
+  width: 500px;
+}
+
+.left-logo img{
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.blocks-container {
+  display: flex;
+  flex-wrap: wrap;         /* allow blocks to wrap to next row */
+  justify-content: center; /* center the blocks horizontally */
+  gap: 80px;               /* space between blocks */
+  max-width: 700px;        /* keeps layout compact like the screenshot */
+  margin: 0 auto;          /* centers the whole container */
+}
+
+.block img {
+  width:50px;
+}
+
+.block {
+  background-color: #cbffd0;
+  width: 300px;
+  height: 220px;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.block:nth-child(2) {
+  background-color: #26a69a;
+}
+
+.block:nth-child(3) {
+  background-color: #26a69a;
+}
+
+.block:nth-child(4) {
+  background-color: #cbffd0;
+}
+
+.block h2 {
+  padding: 0px 10px 0 10px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.block p {
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.page3 {
+  background-image: url('./images/Rectangle 599.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;  
+}
+
+.heading2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 80px;
+}
+
+.top-blocks {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px ;
+}
+
+.top-blocks .block, .bottom-blocks .block {
+  background-color: #cbffd0;
+  width: 350px;
+  height: 40px;
+  display: flex;
+  justify-content: center;  /* horizontal */
+  align-items: center; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bottom-blocks .block {
+  background-color: #26a69a;
+}
+
+.bottom-blocks {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 150px ;
+}
+
+.bottom-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bottom-section img{
+  width: 800px;
+  height: auto;
+}
+
+.page4{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.testimonials  .content {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  gap: 0px; /* space between heading and blocks */
+}
+
+.testimonials h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.top-left-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+}
+
+.bottom-right-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 25%;
+}
+
+.center-blocks {
+  display: flex;
+  align-items: center ;
+}
+
+.side-block {
+  width: 400px;
+  height: 400px;
+  background-color: #cbffd0;
+  border-radius: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 39px;
+}
+
+.side-block img {
+  width: 50px;
+  height: auto;
+}
+
+.side-block p {
+  padding-top: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5;  
+}
+
+#name {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.middle-block {
+  width: 400px;
+  height: 500px;
+  background-color: #26a69a;
+  border-radius: 20px;
+  z-index: 2;
+  margin-right: -50px;
+  margin-left: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 39px;
+}
+
+.middle-block img {
+  width: 70px;
+  height: auto;
+}
+
+.middle-block p {
+  padding-top: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5;  
+}
+
+#name {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.page5 {
+  background-image: url('./images/Rectangle 599.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.faqs {
+  display: flex;
+  align-items: flex-start;
+}
+
+.left-img {
+  width: 30%;
+}
+
+.left-img img{
+  width: 350px;
+}
+
+.right {
+  padding: 60px;
+}
+
+.right .heading {
+  padding: 50px 20px 50px 0px;
+  font-size: 28px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  background-color: #26a69a;
+  border-radius: 20px;
+  width: 500px;
+  height: 400px;
+  gap: 30px;
+}
+
+.form-block {
+  background-color: #cbffd0;
+  display: block;
+  border-radius: 10px;
+  width: 450px;
+  height: 60px;
+  padding: 20px 20px;
+}
+
+.form-block span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fa-solid.fa-circle-arrow-down.fa-2xl {
+  color:#26a69a;
+  float: right;
+  padding: 10px 10px;
+}
+
+.lastpage {
+  background-color: #26a69a;
+}
+
+.contact-page {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.top-logo {
+  padding-top: 30px;
+}
+
+#track {
+  color:#fff;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+#wise {
+  color:#fff;
+  font-size:40px;
+  font-weight: bold;
+}
+
+#textparagraph {
+  color:#fff;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.icons i {
+  margin-right: 30px;
+}
+
+.icons a{
+  text-decoration: none;
+  color: #000;
+}
+
+#contact-support {
+  font-size: 26px;
+  color: #fff
+}
+
+.fa-solid.fa-square-phone.fa-2xl {
+  color: #fff;
+}
+
+.about-section .page-end {
+  display: flex;
+  list-style-type: none;
+  gap: 100px;
+}
+
+.page-end li{
+  font-size: 30px;
+  color: #fff;
+  text-decoration: underline;
 }
